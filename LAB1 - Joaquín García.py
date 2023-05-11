@@ -403,7 +403,6 @@ def pregunta_09():
     }
 
     """
-
     col5 = []
     datos = []
     with open('data.csv') as archivo:
@@ -423,7 +422,7 @@ def pregunta_09():
         registros.append(dividido[0])
         numeros.append(dividido[1])
 
-    lista = []
+    diccionario = {}
     unicos = list(set(registros))
     unicos.sort()
     for i in unicos:
@@ -433,9 +432,8 @@ def pregunta_09():
                 if i==j:
                     num_registros+=1
                 contador+=1
-            tupla = (i,num_registros)
-            lista.append(tupla)
-    return lista
+            diccionario[i]=num_registros
+    return diccionario
 
 def pregunta_10():
     """
