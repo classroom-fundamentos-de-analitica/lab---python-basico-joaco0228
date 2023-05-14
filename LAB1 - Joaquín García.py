@@ -404,7 +404,7 @@ def pregunta_09():
 
     """
     col5 = []
-    datos = []
+    datos = []  
     with open('data.csv') as archivo:
         for linea in archivo:
             linea = linea.split("\t")
@@ -423,7 +423,10 @@ def pregunta_09():
         numeros.append(dividido[1])
 
     diccionario = {}
-    unicos = list(set(registros))
+    unicos = []
+    for i in registros: 
+        if i not in unicos:
+            unicos.append(i)
     unicos.sort()
     for i in unicos:
             contador = 0
@@ -584,4 +587,4 @@ def pregunta_12():
             contador+=1
         diccionario[i]=suma
     return diccionario
-    
+
