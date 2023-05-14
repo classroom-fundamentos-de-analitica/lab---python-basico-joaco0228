@@ -435,7 +435,6 @@ def pregunta_09():
             diccionario[i]=num_registros
     return diccionario
 
-print(pregunta_09())
 def pregunta_10():
     """
     Retorne una lista de tuplas contengan por cada tupla, la letra de la columna 1 y la
